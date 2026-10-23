@@ -1,1 +1,116 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maison Gracia — Creative Portfolio</title>
+<style>
+:root{--cream:#f7f0e7;--rose:#d9a5a5;--wine:#702b3b;--gold:#b99a62;--ink:#29211f;--muted:#796d65}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+.top{background:var(--wine);color:var(--cream);text-align:center;padding:9px;font-size:10px;letter-spacing:3px}
+header{display:flex;align-items:center;justify-content:space-between;padding:23px 7%;border-bottom:1px solid #d8cbb9}
+.brand{font-family:Georgia,serif;font-size:23px;letter-spacing:2px}
+nav{display:flex;gap:18px;font-size:10px;letter-spacing:1px}
+.hero{text-align:center;padding:75px 7% 68px;background:radial-gradient(ellipse at 50% 30%,#f0ddd5 0%,var(--cream) 68%)}
+.kicker{font-size:10px;letter-spacing:4px;color:var(--wine)}
+h1{font-family:Georgia,serif;font-size:clamp(48px,10vw,94px);font-weight:400;line-height:1.02;margin:22px 0;letter-spacing:-2px}
+h1 em{color:var(--wine);font-weight:400}
+.hero p{max-width:400px;margin:0 auto 26px;font-family:Georgia,serif;font-size:16px;line-height:1.8;color:var(--muted)}
+.cta{display:inline-block;background:var(--wine);color:white;padding:14px 24px;font-size:10px;letter-spacing:2px}
+.marquee{border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);padding:13px;text-align:center;font-family:Georgia,serif;font-style:italic;color:var(--wine);font-size:14px;letter-spacing:2px}
+section{padding:65px 7%;max-width:1000px;margin:auto}
+.label{text-transform:uppercase;letter-spacing:3px;font-size:10px;color:var(--wine);text-align:center}
+h2{text-align:center;font-family:Georgia,serif;font-size:36px;font-weight:400;margin:12px 0 14px}
+.sub{text-align:center;color:var(--muted);font-family:Georgia,serif;font-style:italic;font-size:14px;margin-bottom:32px}
+.game{max-width:550px;margin:auto;background:#fffaf3;border:1px solid #dfcbb5;padding:24px}
+.game-top{display:flex;justify-content:space-between;gap:10px;font-size:11px;letter-spacing:1px;color:var(--wine);margin-bottom:18px}
+.board{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}
+.tile{border:1px solid #d8bda4;aspect-ratio:1;background:#ead8cc;color:var(--wine);font-size:clamp(23px,7vw,38px);display:flex;align-items:center;justify-content:center;cursor:pointer;border-radius:2px;transition:background .2s,transform .2s}
+.tile.hidden{background:var(--wine);color:#e9d3a8}
+.tile.hidden span{font-size:20px}
+.tile:disabled{cursor:default}
+.tile.matched{background:#e9e1cf;border-color:var(--gold)}
+.game-message{text-align:center;min-height:45px;padding:18px 0 4px;font-family:Georgia,serif;font-style:italic;color:var(--wine);font-size:14px}
+.reset{display:block;margin:12px auto 0;border:1px solid var(--wine);background:transparent;color:var(--wine);padding:12px 22px;letter-spacing:2px;font-size:10px;cursor:pointer}
+.about{display:grid;grid-template-columns:1fr 1.4fr;gap:35px;align-items:center}
+.about-art{min-height:230px;background:#ead8cc;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--wine);font-family:Georgia,serif;font-size:38px;font-style:italic;padding:20px}
+.about h2{text-align:left;font-size:32px}
+.about p{font-size:13px;line-height:1.9;color:var(--muted)}
+.projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.project{background:#efe2d5;padding:23px;min-height:155px;border-bottom:2px solid var(--gold)}
+.project small{color:var(--wine);letter-spacing:2px;font-size:9px}
+.project h3{font-family:Georgia,serif;font-size:23px;font-weight:400;margin:20px 0 8px}
+.project p{font-size:12px;line-height:1.7;color:var(--muted)}
+.skills{display:flex;justify-content:center;flex-wrap:wrap;gap:9px}
+.skills span{border:1px solid #cbb59b;border-radius:30px;padding:10px 14px;font-size:11px}
+footer{background:var(--wine);color:var(--cream);padding:32px 7%;text-align:center}
+footer .brand{font-size:22px}
+footer p{font-size:10px;letter-spacing:2px;margin:13px 0 0}
+@media(max-width:500px){header{padding:18px 5%}.brand{font-size:18px}nav{gap:10px;font-size:9px}section{padding:48px 6%}.game{padding:13px}.board{gap:6px}.tile{font-size:27px}.about{grid-template-columns:1fr;gap:22px}.about-art{min-height:150px}.projects{gap:9px}.project{padding:15px;min-height:150px}.project h3{font-size:20px}h2{font-size:30px}}
+</style>
+</head>
+<body>
+<div class="top">A LITTLE WORLD OF CREATIVITY · EST. 2026</div>
+<header><a class="brand" href="#">MAISON GRACIA</a><nav><a href="#about">ABOUT</a><a href="#game">PLAY</a><a href="#work">WORK</a></nav></header>
+<main>
+<div class="hero">
+<div class="kicker">BONJOUR, BIENVENUE</div>
+<h1>A creative soul<br>in <em>Parisian dreams.</em></h1>
+<p>Exploring fashion, beautiful ideas, and the little details that make life extraordinary.</p>
+<a class="cta" href="#game">ENTER MY LITTLE WORLD ↓</a>
+</div>
+<div class="marquee">La mode · La beauté · L'imagination · Un peu de magie</div>
+<section id="about">
+<div class="about"><div class="about-art">joie de vivre<br>♡</div><div><div class="label" style="text-align:left">A little introduction</div><h2>Enchantée, I'm Gracia.</h2><p>I'm Gracia Jevania Muljadi, a student exploring the world of creativity, communication, fashion, and branding.</p><p>I love discovering new ideas, building concepts, and turning inspiration into something of my own. This little corner of the internet is where my interests and experiments come together.</p></div></div>
+</section>
+<section id="game" style="background:#f0e5d8;max-width:none">
+<div class="label">Le petit jeu</div><h2>The Paris Match</h2><div class="sub">Find all 6 matching pairs, mon amie ♡</div>
+<div class="game"><div class="game-top"><span>PAIRS <b id="pairs">0 / 6</b></span><span>MOVES <b id="moves">0</b></span></div><div class="board" id="board"></div><div class="game-message" id="message" aria-live="polite">Choose two cards to find a match.</div><button class="reset" id="reset">RESTART GAME ↻</button></div>
+</section>
+<section id="work"><div class="label">A collection of ideas</div><h2>Creative little things</h2><div class="sub">Ideas in progress, dreams in the making.</div><div class="projects">
+<div class="project"><small>01 · FASHION</small><h3>Une Maison</h3><p>A fashion brand concept inspired by timeless silhouettes and modern femininity.</p></div>
+<div class="project"><small>02 · BRANDING</small><h3>Le Moodboard</h3><p>A visual study of textures, colors, and the feeling behind a creative identity.</p></div>
+<div class="project"><small>03 · COMMUNICATION</small><h3>Petite Campagne</h3><p>Ideas for creative campaigns that connect with a young audience.</p></div>
+<div class="project"><small>04 · EXPLORATION</small><h3>En Construction</h3><p>A growing collection of personal experiments and future projects.</p></div>
+</div><p style="text-align:center;font-size:11px;color:#796d65;margin-top:20px">Replace concept descriptions with your real projects as you create them.</p></section>
+<section><div class="label">Things I love</div><h2>My world, in little pieces</h2><div class="sub">Curiosity is always in style.</div><div class="skills"><span>Fashion & Styling</span><span>Creative Concepts</span><span>Visual Research</span><span>Branding</span><span>Communication</span><span>Art Direction</span><span>Digital Design</span></div></section>
+</main>
+<footer><div class="brand">MAISON GRACIA</div><p>MADE WITH CURIOSITY & A LITTLE FRENCH MAGIC</p><p>© 2026 GRACIA JEVANIA MULJADI</p></footer>
+<script>
+const symbols=["🥐","🌹","🗼","🧁","💌","香水"];
+const board=document.getElementById("board");
+const pairsEl=document.getElementById("pairs");
+const movesEl=document.getElementById("moves");
+const message=document.getElementById("message");
+let first=null,lock=false,moves=0,found=0,matched=new Set(),turn=0;
+function shuffle(a){for(let i=a.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function start(){
+board.innerHTML="";first=null;lock=false;moves=0;found=0;matched=new Set();turn++;
+movesEl.textContent="0";pairsEl.textContent="0 / 6";message.textContent="Choose two cards to find a match.";
+shuffle([...symbols,...symbols]).forEach((sym,i)=>{
+const b=document.createElement("button");b.className="tile hidden";b.type="button";b.innerHTML="<span>✦</span>";b.setAttribute("aria-label","Hidden card");b.dataset.symbol=sym;b.dataset.index=i;
+b.addEventListener("click",()=>flip(b));board.appendChild(b);
+});
+}
+function flip(b){
+if(lock||b.disabled||!b.classList.contains("hidden"))return;
+b.classList.remove("hidden");b.textContent=b.dataset.symbol;b.setAttribute("aria-label",b.dataset.symbol);
+if(!first){first=b;return}
+moves++;movesEl.textContent=moves;
+if(first.dataset.symbol===b.dataset.symbol){
+first.classList.add("matched");b.classList.add("matched");first.disabled=true;b.disabled=true;matched.add(first.dataset.index);matched.add(b.dataset.index);found++;pairsEl.textContent=found+" / 6";first=null;
+if(found===6)message.textContent="Magnifique! You found every pair in "+moves+" moves. ♡";
+else message.textContent="Très bien! A beautiful match.";
+}else{
+const prev=first;first=null;lock=true;message.textContent="Pas encore! Try another pair.";
+setTimeout(()=>{if(turn>=1){prev.classList.add("hidden");prev.innerHTML="<span>✦</span>";prev.setAttribute("aria-label","Hidden card");b.classList.add("hidden");b.innerHTML="<span>✦</span>";b.setAttribute("aria-label","Hidden card");lock=false}},750);
+}
+}
+document.getElementById("reset").addEventListener("click",start);
+start();
+</script>
+</body>
+</html>
